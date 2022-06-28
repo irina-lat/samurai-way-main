@@ -1,0 +1,47 @@
+.profileinfo {
+    margin-bottom: 20px;
+}
+
+.descriptionBlock {
+    /*display: flex;*/
+    /*flex-direction: column;*/
+
+}
+
+.avatar {
+    display: flex;
+
+}
+
+.avatar .avatarname > div > a {
+    cursor: pointer;
+    color: #000;
+}
+
+.avatar > .avatarname > time {
+    font-size: 10px;
+    opacity: 0.3;
+}
+
+.photo img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.description {
+
+}
+
+.description > p {
+    margin: 10px 0;
+}
+
+.image img {
+    display: block;
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}

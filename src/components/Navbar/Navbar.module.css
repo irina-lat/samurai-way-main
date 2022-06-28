@@ -1,0 +1,25 @@
+.nav {
+  grid-area: nav;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  background: gray;
+}
+
+.item a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+}
+
+.item a.active {
+  color: blue;
+}
+
+/* .item a:focus {
+  color: blue;
+} */
+
+.item:not(:last-of-type) {
+  margin-bottom: 10px;
+}

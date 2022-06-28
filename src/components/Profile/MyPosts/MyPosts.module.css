@@ -1,0 +1,17 @@
+.postsBlock {
+
+}
+
+.title {
+  color: aqua;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.post {
+  color: green;
+}
+
+.item {
+  margin: 20px 0;
+}

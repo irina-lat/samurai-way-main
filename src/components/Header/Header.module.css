@@ -1,0 +1,12 @@
+.header {
+    background: grey;
+    grid-area: header;
+    display: grid;
+    align-items: center;
+    padding-left: 20px;
+  }
+  
+  .header img {
+    max-width: 80px;
+    min-height: 80px;
+  }
