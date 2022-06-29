@@ -3,6 +3,27 @@
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+textarea {
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: #2d4fa2;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.25);
+    transition: background 0.5s;
+}
+
+button:active {
+    background: #002685;
+}
+
 .app-wrapper {
     display: grid;
     grid-template-areas: "header header" "nav content";

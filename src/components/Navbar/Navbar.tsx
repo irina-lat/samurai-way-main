@@ -2,10 +2,10 @@ import React from 'react';
 import cl from './Navbar.module.css'
 
 type NavbarPropsType = {
-    navbarDate: navbarDateType[]
+    navbarDate: NavbarDateType[]
 }
 
-type navbarDateType = {
+type NavbarDateType = {
     title: string
 }
 

@@ -3,8 +3,7 @@
 }
 
 .descriptionBlock {
-    /*display: flex;*/
-    /*flex-direction: column;*/
+
 
 }
 
@@ -14,8 +13,7 @@
 }
 
 .avatar .avatarname > div > a {
-    cursor: pointer;
-    color: #000;
+    font-weight: bold;
 }
 
 .avatar > .avatarname > time {

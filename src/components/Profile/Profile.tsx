@@ -2,7 +2,7 @@ import React from 'react';
 import MyPosts from './MyPosts/MyPosts';
 import cl from './Profile.module.css'
 import ProfileInfo from './ProfileInfo/ProfileInfo';
-import myPosts from "./MyPosts/MyPosts";
+
 
 type ProfilePopsType= {
     avatarValue:string,

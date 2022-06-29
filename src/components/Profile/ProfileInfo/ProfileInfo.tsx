@@ -38,7 +38,7 @@ function Avatar(props:AvatarPropsType) {
             </div>
             <div className={cl.avatarname} >
                 <div>
-                    <a>{props.name}</a>
+                    <a href={'#'} >{props.name}</a>
                 </div>
                 <time>{props.time}</time>
             </div>

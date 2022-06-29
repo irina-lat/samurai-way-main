@@ -8,6 +8,15 @@
   text-transform: uppercase;
 }
 
+.textarea {
+  display: flex;
+  align-items: self-end;
+}
+
+.textarea > button {
+  padding: 5px 10px;
+}
+
 .post {
   color: green;
 }

@@ -1,14 +1,21 @@
 .item {
-  font-size: 25px;
-  color: red;
+  display: flex;
+  margin: 15px 0;
+
 }
 
-.item img {
+.item > div > a > img {
   border-radius: 50%;
   width: 100px;
   height: 100px;
   object-fit: cover;
+  margin-right: 15px;
+  cursor: pointer;
 }
 
-
-
+.item > div > div {
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #000;
+  font-weight: bold;
+}
