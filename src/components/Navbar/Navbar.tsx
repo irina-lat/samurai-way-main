@@ -1,7 +1,7 @@
 import React from 'react';
 import cl from './Navbar.module.css'
 
-type navbarPropsType = {
+type NavbarPropsType = {
     navbarDate: navbarDateType[]
 }
 
@@ -9,7 +9,7 @@ type navbarDateType = {
     title: string
 }
 
-function Navbar(props: navbarPropsType) {
+function Navbar(props: NavbarPropsType) {
     return (
         <nav className={cl.nav}>
             <div className={cl.item}>
