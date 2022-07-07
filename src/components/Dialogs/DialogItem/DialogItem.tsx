@@ -1,12 +1,32 @@
 import React from 'react';
 import cl from './DialogItem.module.css'
+import {NavLink} from "react-router-dom";
+import {DialogsType} from "../../../App";
 
-function DialogItem ()  {
 
+type DialogItemPropsType={
+    dialogs:DialogsType[]
+}
+
+function DialogItem(props:DialogItemPropsType) {
     return (
         <div className={cl.dialog}>
-            <a href={"#"}>линк диалога айтем </a>
+            <div>
+                {props.dialogs.map(d => {
+                    return (
+                        <div>
+                        <NavLink to={"dialog/" + d.id}>
+                            {d.name}
+                        </NavLink>
+                        </div>
+                    )
+                })}
+            </div>
         </div>
+
+        // <div className={cl.dialog}>
+        //     <a href={"#"}>линк диалога айтем </a>
+        // </div>
     )
 }
 

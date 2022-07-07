@@ -5,11 +5,11 @@ import ProfileInfo from './ProfileInfo/ProfileInfo';
 import {profileInfoDateType} from "../../App";
 
 
-type ProfilePopsType = {
+type ProfilePropsType = {
     profileInfoDate: profileInfoDateType
 }
 
-function Profile(props: ProfilePopsType) {
+function Profile(props: ProfilePropsType) {
     return (
         <div className={cl.profile}>
             <ProfileInfo profileInfoDate={props.profileInfoDate} />

@@ -9,11 +9,15 @@ function MyPosts() {
         return (console.log('MyPosts'))
     }
 
+    function onChangeHandler() {
+        return (console.log('MyPosts'))
+    }
+
     return (
         <div className={cl.postsBlock}>
             <div className={cl.title}>my post</div>
             <div className={cl.textarea}>
-                <textarea  placeholder={'NEW Message'}  name="text" id="post"/>
+                <textarea  onChange={onChangeHandler} placeholder={'NEW Message'}  name="text" id="post"/>
                 {/*<textarea rows="5" cols="30" placeholder={'NEW Message'}  name="text" id="post"/>*/}
                 <button onClick={onClickHandler}>send</button>
             </div>
