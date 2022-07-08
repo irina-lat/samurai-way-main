@@ -1,19 +1,15 @@
-.postsBlock {
-
-}
-
 .title {
   color: aqua;
   font-size: 30px;
   text-transform: uppercase;
 }
 
-.textarea {
+.myposts {
   display: flex;
-  align-items: self-end;
+  margin: 10px 0;
 }
 
-.textarea > a > img {
+.infophoto > a > img {
   display: block;
   border-radius: 50%;
   width: 100px;
@@ -22,8 +18,18 @@
   margin-right: 20px;
 }
 
-.textarea > button {
+.textareablock {
+  display: flex;
+  align-items: center;
+}
+
+.textareablock > button {
   padding: 5px 10px;
+  margin-left: 15px;
+}
+.textarea {
+  width: 350px;
+  height: 100px;
 }
 
 .post {

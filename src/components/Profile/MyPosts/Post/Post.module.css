@@ -1,23 +1,6 @@
 .item {
     display: flex;
     margin: 15px 0;
-
-}
-
-.item > div > a > img {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    margin-right: 15px;
-    cursor: pointer;
-}
-
-.item > div > div {
-    margin-bottom: 10px;
-    cursor: pointer;
-    color: #000;
-    font-weight: bold;
 }
 
 .imgstyle img {
@@ -27,4 +10,17 @@
     height: 100px;
     object-fit: cover;
     margin-right: 20px;
+}
+
+.message {
+    display: flex;
+}
+
+.post {
+    height: 80px;
+    background: cadetblue;
+}
+
+.like {
+    
 }

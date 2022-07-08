@@ -19,20 +19,21 @@ function MyPosts(props: MyPostsPropsType) {
     }
 
     return (
-        <div className={cl.postsBlock}>
-            <div className={cl.title}>Написать пост</div>
-            <div>
+        <div>
+            <p className={cl.title}>Написать пост</p>
+            <div className={cl.myposts}>
                 {props.myPosts.map(myPost => {
                     return (
-                        <div className={cl.textarea}>
+                        <div className={cl.infophoto}>
                             <a href="#"><img src={myPost.avatar}/> </a>
                             <a href="#">{myPost.name}</a>
                         </div>
                     )
                 })}
-                <textarea onChange={onChangeHandler} placeholder={'NEW Message'} name="text" id="post"/>
-                {/*<textarea rows="5" cols="30" placeholder={'NEW Message'}  name="text" id="post"/>*/}
-                <button onClick={onClickHandler}>send</button>
+                <div className={cl.textareablock}>
+                    <textarea className={cl.textarea} onChange={onChangeHandler} placeholder={'NEW Message'} name="text" id="post"/>
+                    <button onClick={onClickHandler}>send</button>
+                </div>
             </div>
             <Post posts={props.posts}/>
             <div className={`${cl.post} ${cl.item}`}>post 2</div>
