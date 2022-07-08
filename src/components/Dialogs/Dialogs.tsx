@@ -18,8 +18,6 @@ function Dialogs(props:DialogsPropsType) {
     function onChangeHandlerMessage() {
         return (console.log('Message'))
     }
-
-
     return (
         <div className={cl.dialogs}>
             <div className={cl.dialogsItems}>

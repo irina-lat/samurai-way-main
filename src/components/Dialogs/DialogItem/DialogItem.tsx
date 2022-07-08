@@ -23,10 +23,6 @@ function DialogItem(props:DialogItemPropsType) {
                 })}
             </div>
         </div>
-
-        // <div className={cl.dialog}>
-        //     <a href={"#"}>линк диалога айтем </a>
-        // </div>
     )
 }
 

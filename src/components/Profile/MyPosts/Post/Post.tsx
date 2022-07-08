@@ -1,18 +1,26 @@
 import React from 'react';
 import cl from './Post.module.css';
+import {PostsType} from "../../../../App";
 
+type PostsPropsType = {
+    posts: PostsType[]
+}
 
-const Post = () => {
+const Post = (props: PostsPropsType) => {
     return (
         <div className={cl.item}>
-            <div>
-                <a href="#"><img src="https://klike.net/uploads/posts/2019-03/1551511829_46.jpg"/></a>
-            </div>
             <div className={cl.itemblok}>
-                <div>
-                    <a href="#">Name</a>
-                </div>
-                <p>Добрый день, интересная статья</p>
+                {props.posts.map(p => {
+                    return (
+                        <div key={p.id}>
+                            <div className={cl.imgstyle}>
+                                <img src={p.img}/>
+                            </div>
+                            <p>{p.messages}</p>
+                            <p>likesCount - {p.likesCount}</p>
+                        </div>
+                    )
+                })}
             </div>
         </div>
     )

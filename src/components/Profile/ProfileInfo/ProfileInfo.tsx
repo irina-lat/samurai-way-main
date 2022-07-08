@@ -1,41 +1,44 @@
 import React from 'react';
 import cl from './ProfileInfo.module.css'
-import {profileInfoDateType} from "../../../App";
+import {ProfileInfoDateType} from "../../../App";
 
 
 type ProfileInfoPropsType = {
-    profileInfoDate: profileInfoDateType
+    profileInfoDate: ProfileInfoDateType[]
 }
 
 function ProfileInfo(props: ProfileInfoPropsType) {
     return (
         <div className={cl.profileinfo}>
             <div className={cl.descriptionBlock}>
-                <Avatar avatar={props.profileInfoDate.avatar} time={props.profileInfoDate.time}
-                        name={props.profileInfoDate.name}/>
-                <Description description={props.profileInfoDate.description} img={props.profileInfoDate.img}/>
+                {props.profileInfoDate.map((profileInfo)=> {
+                    return(
+                        <div>
+                        <Avatar profileInfoDate={profileInfo}/>
+                        <Description profileInfoDate={profileInfo}/>
+                        </div>
+                )})}
+
             </div>
         </div>
     )
 }
 
 type AvatarPropsType = {
-    avatar: string,
-    time: string,
-    name: string
+    profileInfoDate: ProfileInfoDateType
 }
 
 function Avatar(props: AvatarPropsType) {
     return (
         <div className={cl.avatar}>
             <div className={cl.photo}>
-                <a href="#"><img src={props.avatar} alt="avatar"/></a>
+                <a href="#"><img src={props.profileInfoDate.avatar} alt="avatar"/></a>
             </div>
             <div className={cl.avatarname}>
                 <div>
-                    <a href={'#'}>{props.name}</a>
+                    <a href={'#'}>{props.profileInfoDate.name}</a>
                 </div>
-                <time>{props.time}</time>
+                <time>{props.profileInfoDate.time}</time>
             </div>
         </div>
 
@@ -43,16 +46,15 @@ function Avatar(props: AvatarPropsType) {
 }
 
 type DescriptionPropsType = {
-    description: string,
-    img: string
+    profileInfoDate: ProfileInfoDateType
 }
 
 function Description(props: DescriptionPropsType) {
     return (
         <div className={cl.description}>
-            <p>{props.description}</p>
+            <p>{props.profileInfoDate.description}</p>
             <div className={cl.image}>
-                <img src={props.img}></img>
+                <img src={props.profileInfoDate.img}></img>
             </div>
         </div>
     )

@@ -1,9 +1,14 @@
 import React from 'react';
 import cl from './MyPosts.module.css';
 import Post from './Post/Post';
+import {MyPostsType, PostsType} from "../../../App";
 
+type MyPostsPropsType = {
+    myPosts: MyPostsType[]
+    posts: PostsType[]
+}
 
-function MyPosts() {
+function MyPosts(props: MyPostsPropsType) {
 
     function onClickHandler() {
         return (console.log('MyPosts'))
@@ -15,14 +20,21 @@ function MyPosts() {
 
     return (
         <div className={cl.postsBlock}>
-            <div className={cl.title}>my post</div>
-            <div className={cl.textarea}>
-                <textarea  onChange={onChangeHandler} placeholder={'NEW Message'}  name="text" id="post"/>
+            <div className={cl.title}>Написать пост</div>
+            <div>
+                {props.myPosts.map(myPost => {
+                    return (
+                        <div className={cl.textarea}>
+                            <a href="#"><img src={myPost.avatar}/> </a>
+                            <a href="#">{myPost.name}</a>
+                        </div>
+                    )
+                })}
+                <textarea onChange={onChangeHandler} placeholder={'NEW Message'} name="text" id="post"/>
                 {/*<textarea rows="5" cols="30" placeholder={'NEW Message'}  name="text" id="post"/>*/}
                 <button onClick={onClickHandler}>send</button>
             </div>
-            <Post/>
-            <Post/>
+            <Post posts={props.posts}/>
             <div className={`${cl.post} ${cl.item}`}>post 2</div>
         </div>
     );
